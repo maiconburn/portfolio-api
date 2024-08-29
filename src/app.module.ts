@@ -17,6 +17,7 @@ import { Project } from './projects/project.entity';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      csrfPrevention: false,
     }),
     ProjectsModule,
   ],
