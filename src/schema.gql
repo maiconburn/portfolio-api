@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Project {
+  id: Float!
+  name: String!
+  description: String!
+  mainImage: String!
+  images: [String!]!
+  link: String
+}
+
+type Query {
+  projects: [Project!]!
+}
+
+type Mutation {
+  createProject(createProjectInput: CreateProjectInput!): Project!
+}
+
+input CreateProjectInput {
+  name: String!
+  description: String!
+  mainImage: String!
+  images: [String!]!
+  link: String
+}

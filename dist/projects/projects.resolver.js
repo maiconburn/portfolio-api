@@ -40,7 +40,7 @@ __decorate([
     __param(0, (0, graphql_1.Args)('createProjectInput')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_project_input_1.CreateProjectInput]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], ProjectsResolver.prototype, "createProject", null);
 exports.ProjectsResolver = ProjectsResolver = __decorate([
     (0, graphql_1.Resolver)(() => project_entity_1.Project),
