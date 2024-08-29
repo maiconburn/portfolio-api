@@ -18,6 +18,8 @@ import { Project } from './projects/project.entity';
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       csrfPrevention: false,
+      playground: true,
+      introspection: true,
     }),
     ProjectsModule,
   ],
