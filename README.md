@@ -1,85 +1,101 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Portfolio API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This is a NestJS-based API designed to manage portfolio projects. The API is built using modern web technologies such as GraphQL and TypeORM, and it is integrated with SQLite for the database. The goal is to provide a backend for managing project information, including name, description, images, and project links. The API is designed for portfolio websites, making it easier to manage projects dynamically.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Technologies Used
 
-## Description
+- **NestJS**: A progressive Node.js framework for building efficient and scalable server-side applications.
+- **GraphQL**: For handling queries and mutations, providing a flexible way to interact with the API.
+- **TypeORM**: An ORM for TypeScript and JavaScript that allows you to work with databases.
+- **SQLite**: A lightweight SQL database used for data storage.
+- **Apollo Server**: Integrated with GraphQL to handle the server-side logic.
+- **TypeScript**: A strongly typed programming language that builds on JavaScript.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Libraries
 
-## Project setup
+### Dependencies
 
-```bash
-$ yarn install
-```
+- `@apollo/server`: ^4.11.0
+- `@nestjs/apollo`: ^12.2.0
+- `@nestjs/common`: ^10.0.0
+- `@nestjs/core`: ^10.0.0
+- `@nestjs/graphql`: ^12.2.0
+- `@nestjs/platform-express`: ^10.0.0
+- `@nestjs/typeorm`: ^10.0.2
+- `apollo-server-express`: ^3.13.0
+- `graphql`: ^16.9.0
+- `reflect-metadata`: ^0.2.0
+- `rxjs`: ^7.8.1
+- `sqlite3`: ^5.1.7
+- `typeorm`: ^0.3.20
 
-## Compile and run the project
+### Dev Dependencies
 
-```bash
-# development
-$ yarn run start
+- `@nestjs/cli`: ^10.0.0
+- `@nestjs/schematics`: ^10.0.0
+- `@nestjs/testing`: ^10.0.0
+- `@types/express`: ^4.17.17
+- `@types/graphql`: ^14.5.0
+- `@types/jest`: ^29.5.2
+- `@types/node`: ^22.5.1
+- `@types/supertest`: ^6.0.0
+- `@typescript-eslint/eslint-plugin`: ^8.0.0
+- `@typescript-eslint/parser`: ^8.0.0
+- `eslint`: ^8.42.0
+- `eslint-config-prettier`: ^9.0.0
+- `eslint-plugin-prettier`: ^5.0.0
+- `jest`: ^29.5.0
+- `prettier`: ^3.0.0
+- `source-map-support`: ^0.5.21
+- `supertest`: ^7.0.0
+- `ts-jest`: ^29.1.0
+- `ts-loader`: ^9.4.3
+- `ts-node`: ^10.9.1
+- `tsconfig-paths`: ^4.2.0
+- `typescript`: ^5.1.3
 
-# watch mode
-$ yarn run start:dev
+## Features
 
-# production mode
-$ yarn run start:prod
-```
+- Manage projects dynamically with GraphQL.
+- Store project information, including images, descriptions, and links.
+- Utilize SQLite for local data storage.
+- Easily extendable to other databases via TypeORM.
 
-## Run tests
+## Getting Started
 
-```bash
-# unit tests
-$ yarn run test
+### Prerequisites
 
-# e2e tests
-$ yarn run test:e2e
+- **Node.js**: Ensure you have Node.js installed. You can download it [here](https://nodejs.org/).
+- **npm or yarn**: Make sure you have either npm or yarn installed for package management.
 
-# test coverage
-$ yarn run test:cov
-```
+### Installation
 
-## Resources
+1. Clone the repository:
 
-Check out a few resources that may come in handy when working with NestJS:
+   ```bash
+   git clone https://github.com/yourusername/portfolio-api.git
+   cd portfolio-api
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+2. Install dependencies:
 
-## Support
+Using npm: npm install
+Using yarn: yarn install
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Project Structure
 
-## Stay in touch
+src/
+├── app.module.ts      # Main application module
+├── main.ts            # Application entry point
+├── projects/          # Project-related modules, services, and entities
+│   ├── project.entity.ts  # Project entity (ORM)
+│   ├── projects.module.ts # Project module
+│   ├── projects.resolver.ts # GraphQL resolver
+│   ├── projects.service.ts  # Project service
+└── ...
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### API Endpoints
 
-## License
+The API exposes several GraphQL endpoints for managing projects.
+To explore the API via GraphQL Playground, after running the server, open:
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+http://localhost:3000/graphql
