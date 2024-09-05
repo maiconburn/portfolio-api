@@ -26,4 +26,9 @@ export class ProjectsResolver {
   ): Promise<Project> {
     return this.projectsService.update(updateProjectInput);
   }
+
+  @Mutation(() => Project)
+  deleteProject(@Args('id') id: number): Promise<Project> {
+    return this.projectsService.delete(id);
+  }
 }

@@ -35,4 +35,13 @@ export class ProjectsService {
     Object.assign(project, updateProjectInput);
     return this.projectsRepository.save(project);
   }
+
+  async delete(id: number): Promise<Project> {
+    const project = await this.projectsRepository.findOneBy({ id });
+    if (!project) {
+      throw new Error('Project not found');
+    }
+    await this.projectsRepository.remove(project);
+    return project;
+  }
 }
