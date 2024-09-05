@@ -1,3 +1,4 @@
+
 # Portfolio API
 
 This is a NestJS-based API designed to manage portfolio projects. The API is built using modern web technologies such as GraphQL and TypeORM, and it is integrated with SQLite for the database. The goal is to provide a backend for managing project information, including name, description, images, and project links. The API is designed for portfolio websites, making it easier to manage projects dynamically.
@@ -75,14 +76,91 @@ This is a NestJS-based API designed to manage portfolio projects. The API is bui
    ```bash
    git clone https://github.com/yourusername/portfolio-api.git
    cd portfolio-api
+   ```
 
 2. Install dependencies:
 
-Using npm: npm install
-Using yarn: yarn install
+   Using npm:
 
-### Project Structure
+   ```bash
+   npm install
+   ```
 
+   Using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+### Running the API
+
+#### Development Mode
+
+To run the API in development mode with hot-reload:
+
+```bash
+npm run start:dev
+```
+
+or using yarn:
+
+```bash
+yarn start:dev
+```
+
+#### Production Mode
+
+To build and run the API in production:
+
+```bash
+npm run build
+npm run start:prod
+```
+
+or using yarn:
+
+```bash
+yarn build
+yarn start:prod
+```
+
+### Running Tests
+
+To run the unit tests:
+
+```bash
+npm run test
+```
+
+For end-to-end tests:
+
+```bash
+npm run test:e2e
+```
+
+To watch tests during development:
+
+```bash
+npm run test:watch
+```
+
+### API Endpoints
+
+The API exposes several GraphQL endpoints for managing projects.
+
+To explore the API via GraphQL Playground, after running the server, open:
+
+```
+http://localhost:3000/graphql
+```
+
+You can test queries and mutations such as adding new projects, fetching existing ones, and more.
+
+## Project Structure
+
+The project follows a typical NestJS structure with modules, controllers, and services.
+
+```
 src/
 ├── app.module.ts      # Main application module
 ├── main.ts            # Application entry point
@@ -92,10 +170,12 @@ src/
 │   ├── projects.resolver.ts # GraphQL resolver
 │   ├── projects.service.ts  # Project service
 └── ...
+```
 
-### API Endpoints
+## License
 
-The API exposes several GraphQL endpoints for managing projects.
-To explore the API via GraphQL Playground, after running the server, open:
+This project is licensed under UNLICENSED. See the LICENSE file for more details.
 
-http://localhost:3000/graphql
+---
+
+Feel free to contribute to this project by submitting issues or pull requests. If you have any questions, feel free to contact me!
